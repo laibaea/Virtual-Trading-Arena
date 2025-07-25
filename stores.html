@@ -1,0 +1,550 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Group Project">
+
+    <!--====== Title ======-->
+    <title>Virtual Trading Arena</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/normal/favicon.svg" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!--====== flaticon Icons css ======-->
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+
+    <!--====== animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/pricing-tab.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+
+.uniform-image {
+    width: 400px;  /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover;  /* This ensures the images cover the specified dimensions */
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Preloader (It is a kind of a loading screen that appear first when you opens the website )-->
+    <div class="preloader">
+        <div class="loader">
+            <div id="inner-preloader">
+              <div id="shadow"></div>
+              <div id="box"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/normal/Logo1.jpg" alt="Logos">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                   <li class="nav-item">
+                                        <a  href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class=" dd-menu collapsed" href="javascript:void(0)"
+                                            data-bs-toggle="collapse" data-bs-target="#submenu-ads"
+                                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                                            aria-label="Toggle navigation">Browse Ads</a>
+                                            <ul class="sub-menu collapse" id="submenu-ads">
+                                                <li class="nav-item " id="Popular-ads-btn"><a href="index.html#pills-popular-tab">Popular Ads</a></li>
+                                                <li class="nav-item " id="Latest-ads-btn"><a href="index.html#pills-latest-tab">Latest Ads</a></li>
+                                                <li class="nav-item " id="Random-ads-btn"><a href="index.html#pills-random-tab">Random Ads</a></li>
+       
+                                            </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class=" dd-menu collapsed" href="javascript:void(0)"
+                                            data-bs-toggle="collapse" data-bs-target="#submenu-list2"
+                                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                                            aria-label="Toggle navigation">Categories</a>
+                                        <ul class="sub-menu collapse" id="submenu-list2">
+                                            <li class="nav-item"><a href="index.html#vehicle"  class="scroll-link">Vehicle</a></li>
+                                            <li class="nav-item"><a href="index.html#electronics" class="scroll-link">Electronics</a></li>
+                                            <li class="nav-item"><a href="index.html#mobiles" class="scroll-link">Mobiles</a></li>
+                                            <li class="nav-item"><a href="index.html#furniture" class="scroll-link">Furniture</a></li>
+                                            <li class="nav-item"><a href="index.html#fashion" class="scroll-link">Fashion</a></li>
+                                            <li class="nav-item"><a href="index.html#realEstate" class="scroll-link">Real Estate</a></li>
+                                            <li class="nav-item"><a href="index.html#animals" class="scroll-link">Animals</a></li>
+                                            <li class="nav-item"><a href="index.html#education" class="scroll-link">Education</a></li>
+                                            <li class="nav-item"><a href="index.html#allCatagory" >All Categories</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="active dd-menu collapsed" href="javascript:void(0)"
+                                            data-bs-toggle="collapse" data-bs-target="#submenu-list3"
+                                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                                            aria-label="Toggle navigation">Pages</a>
+                                        <ul class="sub-menu collapse" id="submenu-list3">
+                                            <li class="nav-item "><a href="about.html">About Us</a></li>
+                                            <li class="nav-item active"><a href="stores.html">Our Stores</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0)">Stores Details</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0)">Faq's</a></li>
+                                            <li class="nav-item "><a href="404.html">404 Error</a></li>
+                                        
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contactus.html">Contact Us</a>
+                                    </li>
+                               
+                                   
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="login-button">
+                                <ul>
+                                    <li>
+                                        <a href="login.html"><i class="flaticon-user"></i> Login/Register</a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                            <div class="button header-button">
+                                <a href="ad_posting.html" class="btn main-btn btn-inline">Post Your Ads</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!--====== BREADCRUMB PART START ======-->
+    <section class="breadcrumbs_section">
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="breadcrumbs-content left">
+                            <h1 class="page-title">Our Stores</h1>
+                            <p>We have a large number of stores around the Globe, You can visit the nearest store for better experiance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== BREADCRUMB PART END ======-->
+
+
+
+    <!--====== OUR STORES PART START ======-->
+
+    <section  class="our_stores_section pb-130 pt-130">
+
+        <div class="container">
+            <h1 class="my-4">Our Stores Around the World</h1>
+            <div class="store-grid">
+                <div class="store-item">
+                    <h2>1. Store Swipe</h2>
+                    <p>Address: F 132-133, 1st Floor, Plot No 6 Vegas Mall Dawarka, Delhi, 110078</p>
+                    <p>Contact: +123 456 7890</p>
+                    <img src="assets/images/Stores/S1.jpg" alt="Store 1" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>2. Storeful</h2>
+                    <p>Address: Avenida Universidad 2229 Col. San Jose del Arenal Aguascalientes, 20130, Maxico</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s2.jpg" alt="Store 2" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>3. Growoutlet</h2>
+                    <p>Address: C.C. Citadella Av. salvador Martinez 3125 Fracc. Colinas del Paraque San Luis potosi, 78294, Maxico</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s3.png" alt="Store 3" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>4. StoreBolt</h2>
+                    <p>Address: 200 Vesey Street, Suite #118 New York, NY, 10281-5524, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s4.PNG" alt="Store 4" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>5. Ready to Spend</h2>
+                    <p>Address: 222 WASHINGTON ST Hoboken, NJ, 07030-4709, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s5.jpg" alt="Store 5" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>6. Shoppeville</h2>
+                    <p>Address: 81 North 6th Street Brooklyn, NY, 11249-3001, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s6.jpg" alt="Store 6" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>7. Soldeno</h2>
+                    <p>Address: Round Rock Premium Outlets 4401 N Interstate 35 #399 Round Rock, TX, 78664-2675, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s7.PNG" alt="Store 7" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>8. SaleCircuit</h2>
+                    <p>Address: 255 E. Basse Rd STE1040 San Antonio, TX, 78666-5959, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s8.jpg" alt="Store 8" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>9. Discountery</h2>
+                    <p>Address: 33 Kings Rd. London, SW3 4LX, GB</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s9.jpg" alt="Store 9" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>10. Xclearance</h2>
+                    <p>Address: Unit 2039/2040 Westfield Shopping Center Shepherds Bush London, W12 7GF, GB</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s10.jpg" alt="Store 10" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>11. ShopOla</h2>
+                    <p>Address: Affinity Staffordshire Talke Pitts Stoke-on-Trent, ST7 1XD, GB</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s11.jpg" alt="Store 11" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>12. Marteum</h2>
+                    <p>Address: 2100 Arden Way, Suite #172 Sacramento, CA, 95825-2217</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s12.jpg" alt="Store 12" class="uniform-image">
+                </div>
+
+                <br><br>
+                
+                <div class="store-item">
+                    <h2>13. Martzie</h2>
+                    <p>Address: Napa Premium Outlets 615 Factory Stores Drive Napa, CA, 94558-5630, US</p>
+                    <p>Contact: +123 456 7891</p>
+                    <img src="assets/images/Stores/s13.jpg" alt="Store 13" class="uniform-image">
+                </div>
+
+                <br>
+                
+            </div>
+        </div>
+<br><br><br>
+
+
+    <div class="container">
+        <h2 class="my-4">Our Locations on the Map</h2>
+    </div>
+        <!-- Demo Map Integration -->
+    <div class="container my-4" id="map">
+        
+        <div id="map">
+            <img src="assets/images/banner/stores.webp" alt="stores banner">
+        </div>
+    </div>
+
+
+
+    </section>
+
+    <!--====== ABOUT US PART ENDS ======-->
+
+    
+
+    <!--======  COUNTER  START ======-->
+
+    <section id="counter_area" class="counter_area  pt-120 pb-120">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter text-center wow fadeInUp" data-wow-delay=".2s">
+                            <span class="pb-3"><i class="flaticon-like"></i></span>
+                            <h3 class="title"><span class="counter" cup-end="264">264</span>K+</h3>
+                            <p>Regular Ads</p>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single_counter text-center wow fadeInUp" data-wow-delay=".4s">
+                            <span class="pb-3"><i class="flaticon-pin"></i></span>
+                            <h3 class="title"><span class="counter" cup-end="350">350</span>K+</h3>
+                            <p>Location</p>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter text-center wow fadeInUp" data-wow-delay=".6s">
+                            <span class="pb-3"><i class="flaticon-user"></i></span>
+                            <h3 class="title"><span class="counter" cup-end="144">144</span>K+</h3>
+                            <p>Reguler Members</p>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter text-center wow fadeInUp" data-wow-delay=".8s">
+                            <span class="pb-3"><i class="flaticon-rating"></i></span>
+                           <h3 class="title"><span class="counter" cup-end="178">178</span>K+</h3>
+                            <p>Client Satisfication</p>
+                                
+                        </div>
+                    </div>
+    
+
+                  </div>
+                 </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!--======  COUNTER  END ======-->
+
+
+
+
+    <!--====== FOOTER PART START ======-->
+
+    <footer class="footer-area">
+        <div class="footer-widget pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row mx-2 d-flex align-items-center justify-content-center subscribe_row rounded pt-40 pb-40 pl-30 pr-30">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="footer-subscribe-title">
+                                    <h4>Newsletter</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="subscribe-form">
+                                    <form>
+                                        
+                                    
+                                    <div class="col-12 form-line">
+                                      <div class="form-group">
+                                      <input type="email" class="form-control" name="email" placeholder="Enter Email Address....">
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-submit">
+                                      <button type="submit" class="btn-inline main-btn-inline-subscribe">Subscribe</button>
+                                      </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link pt-35">
+                            <h4 class="footer-title mb-25">Quick Links </h4>
+                            <ul>
+                                <li><a href="#">Size Guide</a></li>
+                                <li><a href="#">Faq</a></li>
+                              
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link pt-35">
+                            <h4 class="footer-title mb-25">How To Sell Fast </h4>
+                            <ul>
+                                <li><a href="ad_posting.html">How To Sell Fast</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Banner Advertising</a></li>
+                                <li><a href="#">Promote Your Ad</a></li>
+                                <li><a href="#">Trade Delivers</a></li>
+                            
+                              
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link pt-35">
+                            <h4 class="footer-title mb-25">Information </h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                                <li><a href="#map">Sitemap</a></li>
+                               
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link pt-35">
+                            <h4 class="footer-title mb-25">Help & Support </h4>
+                            <ul>
+                                <li><a href="#">Live Chat</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">How to Stay Safe</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+
+
+
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+
+        <div class="footer-copyright pt-10 pb-20">
+            <div class="container">
+                <div class="copyright-section d-md-flex align-items-center justify-content-between">
+                    <div class="copyright text-center pt-10">
+                       
+                         <p class="pt-2 text">All copyrights reserved © 2021 - Designed & Developed by Trademark Organization </p>
+                    </div> <!-- copyright -->
+                    <div class="footer-bottom text-lg-end pt-15">
+                       
+                </div> <!-- copyright payment -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+
+    <!--====== FOOTER PART ENDS ======-->
+
+
+
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="flaticon-curve-thin-up-arrow"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+
+    <!-- Scroll contrilling Js -->
+     <script src="assets/js/ScrollController.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Demo map display logic -->
+    <script src="assets/js/mapDemo.js"></script>
+
+
+    <!-- Scroll controll logic Js File -->
+    <script src="assets/js/ScrollController.js"></script>    
+
+    <!--====== pricing-tab js ======-->
+    <script src="assets/js/pricing-tab.js"></script>
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== wow.min js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+   // counterUp
+      $('.counter').counterUp({
+          delay: 100,
+          time: 9000
+      });
+
+    </script>
+
+</body>
+
+</html>
+
